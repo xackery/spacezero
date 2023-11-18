@@ -31,9 +31,9 @@
 #define BUFFERSIZE 4096
 
 struct MessageHeader {
-  uint id;     /* identification of the order */
-  uint nobjs;  /* number of objects to send */
-  uint nbytes; /* number of bytes to send */
+  uint32_t id;     /* identification of the order */
+  uint32_t nobjs;  /* number of objects to send */
+  uint32_t nbytes; /* number of bytes to send */
 };
 
 struct Message {
@@ -43,8 +43,8 @@ struct Message {
 
 struct Buffer {
   char* data;
-  uint n;    /* position of read write  */
-  uint size; /* size of the buffer */
+  uint32_t n;    /* position of read write  */
+  uint32_t size; /* size of the buffer */
 };
 
 int send_buf(int sfd, char* buf, int nbytes);
