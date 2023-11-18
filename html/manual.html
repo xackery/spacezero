@@ -1,0 +1,1110 @@
+<!DOCTYPE HTML PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+  <head>
+    
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Spacezero: "A RTS space game"</title>
+    <link href="manual_files/cssscreen.css" rel="stylesheet" media="screen">
+    <link href="manual_files/cssprint.css" rel="stylesheet" media="print">
+    <link href="manual_files/space.ico" rel="shortcut icon" type="image/ico" >
+  </head>
+  <body id="manual">
+    <div class="rightcolumn">
+      <div class="header"><img src="manual_files/title.png" height="145" width="450"></div>
+      
+      
+      <!---------------------------------------------------------------->
+      You can find the last version here: <a href="http://sourceforge.net/projects/spacezero/">SpaceZero homepage</a>
+
+      <div class="content">
+	<h2 >Manual:</h2>
+	
+	<table width="600"><tbody><tr><td> 
+		
+		SpaceZero is a Real Time Strategy 2D space combat game
+		for a single or two players over a network.
+		
+		<br>
+		  Your objective is to conquer all space.
+		<p>
+		  At the starting point the player owns a spaceship which has
+		  landed on a planet.
+		  
+		<p>
+		  Your first task is to acquire new spaceships and
+		  find new planets in the Galaxy.
+		<p>
+		  By pressing key "o", a command menu will be displayed
+		  at the bottom of the main window. You can buy towers
+		  to extract resources and get more gold, explorers and
+		  fighters to explore and conquer the Galaxy.
+		<p>
+		  After selecting an order press "ENTER" to
+		  execute it.
+		<p>
+		  Press "ESC" to cancel it.
+		<p>
+		  Pressing any of the navigation spaceship keys (key
+		  arrows and space bar by default) to control the
+		  spaceship manually. Press the "down key arrow" to
+		  return to automatic mode.
+		<p>
+		  In manual mode you can control every spaceship
+                  independently.  To turn the spaceship right or left use
+                  the arrow keys. In order to accelerate, use the up
+                  key arrow. SPACE to fire.  "1", "2", "3", to change
+                  weapon.
+		<p>
+		  By pressing key "M", a map of the known Universe
+		  will be displayed.
+		  <p>See <a href="#kcontrol">Keyboard control</a> for more options. 
+		  <hr>
+		  <h3>Spaceships:</h3> There are five types of
+		  spaceships: Explorer, Fighter, Defence Tower, Queen
+		  spaceship and defence satellite. 
+		  
+		  
+		  <table width="600"  bgcolor="#222222"><tbody>
+		      <tr>
+			<td><img SRC="manual_files/explorer0.png" alt="Explorer
+								       ship" bgcolor="#222222"></td>
+			<td><h4>Explorer</h4></td><td> Useful to explore
+			  the space. It has a low gas cost and poor
+		      weapons. It has a large radar.</td>
+		  <tr bgcolor="#000000">
+		    <td><img SRC="manual_files/fighter0.png" alt="Fighter
+							   ship"></td>
+		    <td><h4>Fighter</h4><td>
+		      
+		      Better weapons and faster than the explorer. </td>
+		  </tr>
+		  <tr>
+		    <td><img SRC="manual_files/tower0.png" alt="Defence Tower"></td>
+		    <td><h4>Defence Tower</h4></td>
+		    
+		    <td>The Defence Tower can only stay on planets. It has two
+		      objectives: the defence of the planet and the
+		      extraction of minerals.</td>
+		  </tr>
+		  <tr  bgcolor="#000000">
+		    <td><img SRC="manual_files/queen0.png" alt="queen
+							 spaceship"></td>
+		    <td><h4>Queen spaceship</h4></td>
+		    
+		    <td>In queen mode game, if you lose it, you lose
+		      the game.</td>
+		  </tr>
+		  <tr  bgcolor="#000000">
+		    <td><img SRC="manual_files/transport.png" alt="Freighter
+							 spaceship"></td>
+		    <td><h4>Freighter</h4></td>
+		    
+		    <td>Opening  up commerce between two planets. The
+		    gold earned is proportional to the distance
+		    between the two planets.</td>
+		  </tr>
+		  <tr>
+		    <td><img SRC="manual_files/satellite.png"
+		    alt="defence satellite"></td>
+		    <td><h4>Defence satellite</h4></td>
+		    
+		    <td>Unmanned ship. Useful for space exploration
+		    and planet defence.</td>
+		  </tr>
+
+
+		</tbody></table>
+		
+		<h3>Other objects:</h3>
+		
+		<table width="600"  bgcolor="#222222"><tbody>
+		  <tr  bgcolor="#000000">
+		    <td><img SRC="manual_files/pilot.png" alt="pilot"></td>
+		    <td><h4>Astronaut</h4></td>
+		    
+		    <td> All FIGHTERS of level 1 or superior come
+		      equipped with a survival pod. When a spaceship
+		      is destroyed the pilot is ejected. This pilot
+		      will be able to survive in space during a
+		      certain time (around 5 min.). He can be rescued
+		      by another spaceship and returned to the ground
+		      where he will be able to acquire a new
+		      spaceship.  The level of the new spaceship will
+		      be equal to the old one. Its experience is set
+		      to zero.</td>
+		  </tr>
+		  <tr>
+		    <td><img SRC="manual_files/planet.png" alt="planet"
+			     width="64" bgcolor="#222222"></td>
+		    <td><h4>Planets</h4></td>
+		    <td> You must conquer them.</td>
+		  <tr bgcolor="#000000">
+		    <td><img SRC="manual_files/asteroid.png"
+			     alt="Asteroid"></td>
+		    <td><h4>Asteroids</h4></td>
+		    <td>Everywhere. Destroying them, you get
+		    gold. </td>
+		  </tr>
+		  <tr>
+		    
+		</tbody></table>
+
+
+		<h3>Ship Properties:</h3>
+
+		<table width="600"  bgcolor="#222222"><tbody>
+		  <tr  bgcolor="#000000">
+		    <td></td><td></td><td>Mass</td><td>Max. velocity<br> (pixels/s)</td><td>Weapons</td><td>Cargo</td><td>Radar range<br>(in sectors)</td></tr>
+
+		  <tr  bgcolor="#000000">
+		    <td><img SRC="manual_files/explorer0.png" alt="Explorer ship" bgcolor="#222222"></td>
+		    <td><h4>Explorer</h4></td>
+		    <td>50</td><td>30</td><td>shots</td><td>30</td><td>2</td>
+		  </tr>
+
+		  <tr  bgcolor="#000000">
+		    <td><img SRC="manual_files/fighter0.png" alt="Fighter ship" bgcolor="#222222"></td>
+		    <td><h4>Fighter</h4></td>
+		    <td>100</td><td>30</td><td>shoots, missile, laser</td><td>30</td><td>1</td>
+		  </tr>
+
+		  <tr  bgcolor="#000000">
+		    <td><img SRC="manual_files/tower0.png" alt="Tower ship" bgcolor="#222222"></td>
+		    <td><h4>Defence Tower</h4></td>
+		    <td>100</td><td>0</td><td>shoots</td><td>0</td><td>1</td>
+		  </tr>
+
+		  <tr  bgcolor="#000000">
+		    <td><img SRC="manual_files/queen0.png" alt="Queen ship" bgcolor="#222222"></td>
+		    <td><h4>Queen</h4></td>
+		    <td>400</td><td>30</td><td>shoots</td><td>100</td><td>3</td>
+		  </tr>
+		  <tr  bgcolor="#000000">
+		    <td><img SRC="manual_files/transport.png" alt="Freighter ship" bgcolor="#222222"></td>
+		    <td><h4>Freighter</h4></td>
+		    <td>400</td><td>30</td><td>none</td><td>200</td><td>2</td>
+		  </tr>
+
+		  <tr  bgcolor="#000000">
+		    <td><img SRC="manual_files/satellite.png" alt="Defence satellite" bgcolor="#222222"></td>
+		    <td><h4>Satellite</h4></td>
+		    <td>10</td><td>30</td><td>shoots</td><td>0</td><td>3</td>
+		  </tr>
+
+		  <tr  bgcolor="#000000">
+		  <td><img SRC="manual_files/pilot.png" alt="pilot"></td>
+		    <td><h4>Astronaut</h4></td>
+		    <td>10</td><td>20</td><td>none</td><td>0</td><td>1</td>
+		  </tr>
+
+	  		    
+		</tbody></table>
+		
+		<hr>
+		<a name="orders"></a>
+		<h3>Orders menu:</h3> It is possible to give orders to
+		spaceships: pressing the "o" key, an orders menu is
+		displayed at the bottom of the main window. When you
+		enter the order mode you only can give an order. You
+		get out of the order mode in one of the following
+		ways:
+		
+		<ul>
+		  <li> Executing the order. Pressing "ENTER".
+		  <li> Cancelling the order. Pressing "ESC".
+		  <li> Changing spaceship. Pressing: "TAB",
+		    "PageUp", "PageDown" or
+		    "Home".
+		</ul>
+		Several orders are available:
+		
+		<br><br>
+		
+		<table  width="600" bgcolor="#222222" border="0"><tbody>
+		  <tr>
+		    <td width="100">GOTO</td>
+		    <td>You can send your spaceships to different targets in many ways:
+		      <ul display="inline">
+			<li>Giving the target id. The target id can be
+			  a planet or another spaceship. Several spaceships can
+			  fly together if all of them have the same
+			  target id. Example: GOTO 23. Will go the
+			  object labelled with the number 23. It can be
+			  a planet or another spaceship.
+			<li>Giving the sector coordinates separated
+			  by blank or coma. Example: GOTO 23,12
+			<li>Go to the nearest planet with n. Example:
+			  GOTO n. Will go to the nearest allied or known
+			  free planet.
+			<li>Instead of the spaceship id you can write
+			  F1, F2, etc. for the selected marked spaceships
+			  (see <a href="manual.html#selecting">
+			    selecting a spaceship</a>). Example: GOTO F3.
+			  <li>In map view, the right mouse button will
+			  send the selected spaceships to the mouse
+			  position.  If the pointer is closer than 0.5
+			  sectors to a planet or to one's spaceship then
+			  they will be sent to that planet or spaceship.
+		      </ul>
+		    </td>
+		  </tr>
+		  <tr bgcolor="#000000">
+		    <td>EXPLORE</td>
+		    <td>Your spaceship will take off and will explore
+		      space. Be aware if your spaceship runs out of fuel or if
+		      it is very far from home.</td>
+		  </tr>
+		  <tr>
+		    <td>SELECT</td>
+		    <td>You can select a spaceship or a planet typing its
+		      id.</td>
+		  <tr bgcolor="#000000">
+		    <td>STOP</td>
+		    <td>Your spaceship will stop. Inside a planet, it will
+		      land first. Once stopped, it will only shoot, but will
+		      not accelerate.</td>
+		  </tr>
+
+		  <td>RETREAT [n]</td>
+		  <td>
+		    <ul>
+		    <li>Your spaceship will go directly to the nearest
+		    empty or allied planet, without attacking 
+		    enemies or asteroids.
+		  <li> You can also assign a target planet adding its
+		  id after the order. Example: RETREAT 23 will send
+		  your selected spaceships to planet 23 (it can be
+		  allied or enemy).
+		    <p>
+		      Once entering planet the order will be
+		      changed:
+		      <ul>
+			<li> If the planet is empty or allied it will
+			be changed to STOP.
+			<li> In the case of an enemy planet, the order
+		      will be changed to GOTO, attacking the enemies.
+		      </ul>
+
+		  </ul>
+		  </td>
+		  </tr>
+		  
+		  <tr bgcolor="#000000">
+		    <td>TAKE OFF</td>
+		    <td>To take off.</td>
+		  </tr>
+		  <tr>
+		    <td>ORBIT</td>
+		    <td>The Spaceship will take off and orbit around
+		    the planet.  If it starts at outer space it will
+		    go first close to nearest planet.<br>  
+
+		      It will never thrust while orbiting. Under
+		    attack it only turns and shot. With low
+		    ammunition, fuel or great damages, it will return to
+		    the nearest allied planet. </td>
+		  </tr>
+
+		  <tr bgcolor="#000000">
+		    <td>BUY</td>
+		    <td>You can buy any available spaceship, if you have
+		      enough gold. The spaceship must be landed. <br> 
+		      If you are not in a planet of your own, you can't
+		      buy Towers.<br>
+		    The Pilots only can buy Fighters.</td>
+		  </tr>
+		  <tr>
+		    <td>UPGRADE</td>
+		    <td>You can upgrade your spaceship until one level
+		      lower than the greatest level reached. The spaceship
+		      must be landed.</td>
+		  </tr>
+		  <tr bgcolor="#000000">
+		    <td>SELL</td>
+		    <td>To sell a spaceship. You'll get the half of its
+		      original value. The spaceship must be landed.<br>
+		      If it is not landed will be destroyed.
+
+		    </td>
+		  </tr>
+		  <tr>
+		    <td>REPEAT</td>
+		    <td>Repeat the last order given.</td>
+		  </tr>		  
+	  </tr>
+	  </tbody></table>
+	  
+	  <h3>Manual and automatic mode:</h3>
+	  
+	  <p>
+	    You can change between both modes, for all your spaceships,
+	    pressing any of the navigation spaceship keys (key arrows
+	    and space bar by default) for manual mode and give an
+	    order or press the "down arrow" key to go back to
+	    automatic mode.<p>
+	    
+	  <p> Only one spaceship can be changed between these modes at a
+	    time. Inside a planet this special spaceship is drawn with
+	    white color. In the free space this spaceship is shown with
+	    the radar centered on it.
+	    
+	  <p> In manual mode you can control every spaceship independently
+	    with the keyboard. To turn the spaceship use the left and right
+	    arrow keys. To accelerate, the up key arrow. SPACE to
+	    fire. 1,2,3 to change armour.
+	  <p>
+	    In automatic mode, the spaceship follows your orders,
+	    except in the following cases:
+	    
+	    <ul>
+	      <li>If an enemy spaceship is near then attack.
+	      <li>If it is close to asteroids, it will go towards them.
+	      <li>If it has little fuel or no ammunition it will go to the
+		nearest allied planet.
+	      <li>When landed, it doesn't take off until it obtains a
+		minimum amount of fuel and ammunition.
+	    </ul>
+
+	    When the exceptions finish, it will continue with the given
+	    order.
+	    
+	   <p> Special orders:
+	     <ul>
+	  <li>STOP:<br>
+
+	    If the spaceship is in outer space: stop, doesn't accelerate but can fire. <br>
+
+	    Inside a planet: it first lands and stays on the ground, it doesn't take
+            off but can fire. It never takes off.<br>
+
+	    The order STOP is applied except in the following cases: 
+
+	    <ul>
+	    <li>if the spaceship has low ammunition, low fuel or is very
+	    damaged it goes to the nearest allied planet.
+	    </ul>
+
+	    <li> RETREAT:<br> 
+	      The spaceship will go directly to their destiny without
+	      attack  enemies or asteroids.
+	    </ul>
+
+	    <hr>	      
+	    <a name="selecting"></a>
+	    <h3>Selecting a spaceship:</h3>
+	    
+	  <p>
+	    There are several ways of selecting a spaceship:
+	    <ul>
+	      <li>Pressing the "Tab" key you can change
+		between all your spaceships. "Ctrl-Tab" inverts
+		the order.
+	      <li>Pressing "PageDown" selects a spaceship in
+		the next planet. "PageUp" in the
+		previous one.
+	      <li>Pressing "Home" selects the first
+		spaceship in outer space.
+	      <li>Using the order command SELECT and introducing
+		the spaceship ID.
+	      <li>With mouse. Left button selects the nearest spaceship to
+	      mouse pointer. This selected spaceship can be inside a
+	      planet.
+	      <li>There are four rapid access keys to select spaceships:
+		F1, F2, F3 and F4.  If you press Ctrl-F1 the
+		actual selected spaceship is assigned to the key F1,
+		etc...
+	    </ul>
+	  </p>
+	  
+	  <h3>Selecting multiple spaceships:</h3>
+	  <p>
+	    You can select various spaceships with the mouse. The next
+	    order will affect all of them. Simply, click with the left
+	    mouse button and, without releasing it, drag and select
+	    the region you want. All spaceships in this region will be
+	    selected.
+	  <p>
+	    You can select multiple individual spaceships keeping the
+	    "ctrl" key pressed.
+	  <p>
+	    If you select a planet in the map view, all spaceships
+	    inside the planet will be selected.
+	  <p>
+	    The color of the selected spaceships will be grey.
+
+
+	  <h3>Selecting a target:</h3>
+	  <table><tbody>
+	    <tr><td>
+		<img SRC="manual_files/target.png" alt="radar">
+	      </td>
+	      <td>
+		If the mouse pointer is close to a planet or one's own
+		spaceship a red square signs the target objective. The right
+		mouse button will send all selected spaceships to this
+		target. This target can be a planet or any of your
+		spaceships.<p>
+
+		Over the mouse pointer is displayed: the space
+		coordinates, the distance, in sectors from the
+		selected spaceship to the mouse pointer and the id of the
+		target.
+		  
+	      </td>
+	    </tr>
+	    </tbody> </table>
+
+
+	    <h3>Weapons:</h3>
+	  <p>
+	    The spaceships have three types of weapons. 
+	    <table bgcolor="#222222" width="600"><tbody>
+	      <tr>
+		<td width="100">Shots</td><td>All the spaceships.</td>
+	      </tr>
+	      <tr bgcolor="#000000">
+		<td>Missile</td><td>Only fighters.</td>
+	      </tr>
+	      <tr>
+		<td>Laser</td><td>Only fighters.</td>
+	      </tr>
+	      
+	    </tbody></table>
+	  <p>
+	    Depending on the level of the spaceship some weapons are
+	    available or not. At level 0 only the shots are
+	    available. The fighter has two more weapons: missile at
+	    level 1 and laser at level 2. All the spaceships increase their
+	    weapons strength and their shields when they get a new
+	    level.<br>
+
+	    In manual mode you can change amongst the weapons pressing
+	    1, 2 or 3 keys (If the weapon is available or it has
+	    ammunition).
+	  </p>
+
+
+	  <h3>Defence satellites:</h3>
+	  <table><tbody>
+	    <tr><td>
+		<img SRC="manual_files/satellites.png" alt="satellites">
+	      </td>
+	      <td>
+		In order to get defence satellites orbiting around
+		your planets you must proceed as following: <br>
+		<ul>
+		<li>Buy some satellites (spaceships must be landed). <br>
+		<li>Give them the ORBIT order. <br>
+		<li>Once the spaceships are orbiting eject the satellites pressing &lt;Alt-s&gt;.
+		</ul>  
+		You can destroy the satellites selecting and giving them the order DESTROY.<br>
+		All the satellites that are far away from a planet will be lost.
+	      </td>
+	    </tr>
+	    </tbody> </table>
+
+	  </p>
+	  <hr>
+	  <h3>Window and spaceship centered view modes.</h3>
+	  
+	  Pressing "Ctrl-n" it is possible to change between two
+	  view modes: centered at the spaceship or centered at the
+	  window.
+	  
+	  <hr>
+	  <a name="gamemodes"></a>
+	  <h3>Game modes:</h3>
+	  
+	  There are three game modes: Cooperative, Deathmatch and Queen mode.
+	  
+	  <ul>
+	    <li>Cooperative.<p>  You can select from the menu two
+		options:
+		<ol>
+		  <li>Cooperative mode. In this case all human
+		    players fight in the same team.
+		  <li>Computer cooperative mode. All computer
+		    players fight in the same team.
+		</ol>
+		<li>Deathmatch.<p>  It is the default mode. All
+		    the players fight against all.
+		    <li>Queen mode.<p>
+			
+			A special spaceship plays the same role as
+			the King in chess. If you lose it, all
+			your spaceships are destroyed. GAME OVER.
+			
+	  </ul>
+	  
+	  It is possible to select these options from the command
+	  line: -cooperative, -compcooperative, -queen.
+	  
+	  <hr>	    
+	  <a name="infowindows"></a>
+	  <h3>Navigate information:</h3>
+	  <p>
+	    <table width="600"><tbody>
+	      <tr>
+		<td><img SRC="manual_files/navinfo.png" alt="Navigation information"></td>
+		<td>
+		  
+		  In normal navigation mode, in the left of the
+		  main window you can see the following information:
+		  <ul>
+		    <li>Three status bars: energy,
+		      state and experience of the current selected
+		      spaceship. The number next to STATE is the
+		      shield. A shield of 0.3 means that the spaceship
+		      receives 70% of the damage. The maximum
+		      value is 0.9.
+		    <li>Information about the current selected spaceship as
+		      the type of spaceship. Its ID. Its mode: Automatic
+		      (A) or Manual (M) and its level.<br> Ammunition of
+		      the current selected weapon (damage) and weapon
+		      selected.<br>  In which sector it is, velocity,
+		      number of enemies killed, actual order, distance
+		      and time remaining to reach the target.
+		      
+		    <li>Global information about the player: gold,
+		      number of planets, number of spaceships, number
+		      of enemies defeated, number of spaceships lost and
+		      points.
+		      
+		    <li>Information about the planet in which the spaceship
+		      is. Planet ID, gold remaining, resource, mass
+		      and the level of the highest level spaceship. The
+		      resource indicates the number of towers that can
+		      be built in the planet. More towers can still
+		      defend the planet but don't extract more gold.
+		  </ul>
+		</td>
+	      </tr>
+	    </tbody></table>
+	    
+	    
+	    <h3>Radar:</h3>
+	  <p>
+	    <table width="600"><tbody>
+	      <tr>
+		<td>
+		  <img SRC="manual_files/radar0.png" alt="radar">
+		</td>
+		<td>
+		  In the free space the radar info is shown as a red
+		  circle centered at the spaceship. The different objects
+		  are represented as follows: big dots for planets, with
+		  the color of the player that owns such planet. White
+		  dots for the owned spaceships, blue dots the
+		  spaceships of the same team and red dots for the enemy
+		  spaceships.<br>
+		  The survival pods as flashing crosses.
+		</td>
+	      </tr>
+	    </tbody></table>
+	    
+	    
+	    <h3>Map:</h3>
+	  <p>Pressing the "m" key you enter in the map
+	    view. All your spaceships and all known planets are
+	    shown.<br> It is possible to zoom in and out with
+	    "z" and "Z".
+	    <br>The cursor keys allow you to move along the map.<br>
+	    &lt;SPACE&gt; centers the map on the current spaceship.<br>
+	    Over the mouse pointer the space coordinates and the
+	    distance in sectors from the selected spaceship to the mouse
+	    pointer are displayed.
+	  </p>
+	  
+	  <table width="600"><tbody>
+	    <tr>
+	      <td>
+		<img SRC="manual_files/map1.png" alt="radar">
+	      </td>
+	      <td>
+		The white color is reserved for empty planets and
+		asteroids. The different objects have the color of
+		their player. The planets are represented by big
+		dots, the spaceships by crosses, the asteroids by
+		white crosses, the astronauts in free space by
+		flashing crosses. The spaceships and planets
+		also have their own id number.
+		<p>
+		  The explored universe is marked with dark red
+		  crosses. The universe has a limit; beyond that
+		  there are no marks and no objects.
+	      </td>
+	    </tr>
+	    <tr><td>
+		<img SRC="manual_files/target.png" alt="radar">
+	      </td>
+	      <td>
+		If the mouse pointer is close to a planet or one's own
+		spaceship, a red square signs the target objective. The right
+		mouse button will send all selected spaceships to this
+		target. This target can be a planet or one's own
+		spaceship.<p>
+	      </td>
+	    </tr>
+	    
+	  </tbody></table>
+	  
+	  
+	  <h3>Game messages:</h3>
+	  
+	  <table width="600"><tbody>
+	    <tr>
+	      <td>
+		<img SRC="manual_files/terminal3.png" alt="terminal">
+	      </td>
+	      <td>
+		<p>All information about the game as: spaceships in
+		  danger, asteroids found, planets discovered,
+		  etc. appears in the bottom left corner of the main
+		  window.
+		  
+		<p>Pressing the "f7" key a log message window will pop
+		up. It shows the last 200 game messages.
+
+		<p>If you run SpaceZero from a terminal the same
+		  information is displayed on it. All the given
+		  orders accepted are also shown there.
+		  
+	      </td>
+	    </tr>
+	  </tbody></table>
+	  
+	  
+	  <h3>Spaceships and planets info:</h3>
+	  <p>Pressing the "f5" key short information of all your
+	    spaceships and planets is displayed.
+	  </p>
+	  
+	  <table width="600"><tbody>
+	    <tr>
+	      <td><img SRC="manual_files/shiplist.png" alt="Ship list"></td>
+	      <td>
+		
+		<ul>
+		  In the left of the main window you can
+		  see the following information about your spaceships:
+		  
+		  <br> The first line shows the total number
+		    of spaceships and the number of each type.
+
+		  <br>There is a line for every spaceship with the following information:
+
+		  <li>The type of the spaceship and its level: F
+		    (fighter), T (tower), E (explorer), Q (queen) , A
+		    (astronaut) or M (if it is in manual mode).
+		    
+		  <li>Its ID. 
+		    
+		  <li>The actual order. EXP means exploring. GT:14
+		    that is going to obj 14.
+		    
+		  <li>In which planet is the spaceship. IN:0 means in outer space.
+
+		  <li>If the spaceship state or energy
+		    are not at 100% it is showed these values.
+		    
+		  <li>In white color its shown the actual selected
+		    spaceships. Red and yellow colors are for
+		    spaceships in danger (cause of low gas or
+		    damaged).  The pilots and spaceships in manual
+		    mode are shown in red.  In blue the allied
+		    ones.
+		</ul>    
+	      </td>
+	    </tr>
+	    <tr>
+	      <td><img SRC="manual_files/planetlist.png" alt="planet list"></td>
+	      <td>
+		In the right side of the screen is shown a planet
+		list with the next information: planet id, gold
+		remaining and the number of spaceships in it.
+		<br>The number of spaceships in outer space is showed in the second line.
+	      </td>
+	      
+	    </tr>
+	  </tbody></table>
+	  
+	  <p>Pressing the "f6" key a sort game
+	    statistics are displayed with the next information:
+	  </p>
+	  <p>
+	    <img SRC="manual_files/statistics.png" alt="game statistics">	    
+
+	  <p>In the left window: the historic values of the sum of the
+	  level of all spaceships.
+	    
+	  <p>In the right one: Player name, [player level : sum
+	    of the level of all spaceships : average level], number of
+	    spaceships, (total number of spaceships created), planets, enemy
+	    destroyed and number of lost spaceships.
+	    
+	  <p>Pressing the "ESC" key all the info windows are closed.</p>
+	  <hr>	    
+
+	  <h3>Repairing spaceships:</h3>
+
+	  The spaceships are repaired, refueled and rearmed while are on
+	  ground. <br>
+	  In space, can be done little reparations. They obtain also some energy.
+	  
+
+	  <a name="experiencegold"></a>
+	  <h3>Experience and Levels:</h3>
+	  
+	  Spaceships experience increase during the game. When a spaceship
+	  reaches a maximum is upgraded to the next
+	  level. This way it can get new arms, better defence
+	  and more power. If a spaceship is upgraded, its state and
+	  energy is restored to the maximum value.
+
+	  <br><br>
+	  The spaceships can get experience in any of the following ways:
+	  
+	  <p>
+	    <ul>
+	      <li><b>In combat</b>, when a spaceship is reached by a shot,
+		destroying an enemy spaceship and conquering an enemy or
+		empty planet.<br>
+		
+		When a spaceship conquer a planet there is a probability to
+		received info from enemy (the coordinates of some
+		planet). This probability increase with spaceship's level.
+		
+	      <li><b>Exploring</b>: Discovering new planets.
+		
+	      <li><b>Training</b>: all spaceships with a level equal or
+		superior to 3 can train other spaceships. For training,
+		both spaceships must be in same planet and the pupil must
+		be landed. The master also must be two levels
+		superior. The spaceship must be totally repaired.
+	      <li><b>Trading</b>: Every time a Freighter complete a
+	      trip increased it experience.
+	      <li><b>Upgrade</b>: you can upgrade a spaceship (it cost
+		gold). You can only upgrade until one level below the
+		player level.
+		
+	    </ul>
+	    
+	    <h4>Player level:</h4> The player level is the maximum
+	    level reached for one of your spaceships. The level of the
+	    player will be increased only when the spaceship lands.
+	    
+
+	    
+	    <h3>Gold:</h3>
+	    
+	    <h4>There are several ways to obtain gold:</h4>
+	  <p>
+	    -Every tower in each planet gets gold until the planet
+	    resources are finished. In this case they can still
+	    obtain a little amount of gold. Increasing the number
+	    of towers in every planet increased the amount of gold
+	    obtained. Depending on the planet mass, there is a
+	    limit in the number of towers in the same planet that
+	    can obtain gold. For the big ones, this limit can be
+	    four or five towers. For the little ones, three.
+	    
+	  <p>
+	    -For each planet, every player gets a fix amount of
+	    gold.
+	    
+	  <p>
+	    -Destroying asteroids is another way to obtain gold.
+	  <p>
+	    -Trading: when a Freighter spaceship reach a planet, the
+	    planet resources are increased.
+	    
+	  <p>
+	    -All the spaceships destroyed inside a planet increase the
+	    planet resources.
+	  <p>
+	    -And the last way: selling spaceships .
+	    
+	  <p><br>
+	    
+	    <h4>And there are also several ways to lost it:</h4>
+	    
+	  <p>
+	    -All the spaceships, except the towers, have a cost. This
+	    constant cost is increased when a spaceship is upgraded.
+	    
+	  <p>
+	    -All the ammunition cost gold.
+	    
+	  <p>
+	    -Repair and refuel a spaceship cost gold.
+	    
+	  <p>
+	    -Buying, upgrading spaceships. 
+	    
+	    
+	    <h3>Exploring the Universe:</h3>
+
+
+
+	    The explore skills depends on the level of the spaceship:
+	    <ul> 
+	      <li> level 0: a random walk. 
+	      <li> level 1: try to find an unknown sector near their
+		position. if there no one: random walk
+	    
+	      <li>level 2 and greater: looks for an unknown sector
+		further than the previous level. If there no one: random
+		walk
+	    </ul> 
+
+	    The explorers increase in one their skill value: an
+	    explorer of level 0 has a level 1 on explorer skill. A
+	    fighter of level 0 has a level 0 on explorer skill.
+
+
+	    <h3>Size of the Universe:</h3>
+	    
+	    Its possible to choose the size of the Universe, the
+	    number of galaxies and the total number of
+	    planets. Use the command line options: -l, -g and
+	    -n.<p>  The units of the universe size are pixels.
+	    The distance is indicated in sectors (1 sector is 1410
+	    pixels)
+	    
+	    <hr>	      
+	    <a name="netgaming"></a>
+	    <h3>Net gaming:</h3>
+	    
+	    For two players net game: one must be configured as
+	    the server and the other one as the client. Use the
+	    next command line options: <p>
+	    
+	    $ spacezero -s -ip ipnumber <br>
+	    
+	    for the server, and <br><br>
+	    
+	    $ spacezero -c -ip ipnumber <br>
+	    
+	    for the client. <p>
+	    
+	    where ipnumber is the IP number of the server.
+	    
+	  <p>
+	    SpaceZero use the port 50100 by default. You can use
+	    another port adding -port portnumber in the command
+	    line. SpaceZero also use the next port, by default
+	    50101.
+	    
+	    <hr>
+
+	    <h3>Saving game options:</h3> By default the options are
+	    saved when the game starts. A new game starts with the
+	    previous game options.
+
+	    <a name="loadsave"></a>
+	    <h3>Loading and saving games:</h3>
+	    
+	    &lt;Ctrl&gt;-s and &lt;Ctrl&gt;-l will save and load a game. Only two
+	    games can be saved: one for single games and another one for a net
+	    games.
+	    <br>In a net game only the server can save and load games.
+
+
+	    <h3>Pausing a game:</h3>
+	    
+	    &lt;Ctrl&gt;-p will pause the game.
+	    
+
+	    <h3>Quitting a game:</h3>
+	    
+	    &lt;Ctrl&gt;-q will quit the game.
+	    
+	    <h3>Game Over:</h3>
+	    
+	    If you lost all your spaceships the game is over.
+	  <p>
+	    In queen mode game, if you lost the Queen Spaceship,
+	    you lost the game.
+	  <p>
+	    When game is over, pressing the "f9" and
+	    "f10" keys you can observe the other players
+	    (in single games and in the server side).
+	    
+	    
+	    
+	    <h3>Tips:</h3>
+	  <p>-Try to conquer all the inexplore planets as fast as
+	    you can.
+	  <p>-Don't buy more than two or three towers by planet
+	    unless you need to defend the planet.</p>
+	  <p>-Watch out your explorers, don't let them go too far.</p>
+	  <p>-You can form groups of spaceships ordering to some of
+	    them GOTO another spaceship. All of them will go where this
+	    last one go.</p>
+	  <p>-Save some gold. It would be useful if you are under attack.</p>
+	  <p>-Use the spaceships of level three or superior to upgrade
+	    the rest, especially the towers.</p>
+	  
+</td></tr></tbody></table>
+<hr>
+
+<a name="kcontrol"></a>
+<h3>Keyboard controls (default values):</h3>
+
+<table width="600"><tbody><tr><td> 
+      <table border="1"><tbody>
+	<tr><td>up arrow	</td><td>accelerate/manual mode.</td></tr>
+	<tr><td>left,right arrows	</td><td>turn left, right/manual mode.</td></tr>
+	<tr><td>SPACE		</td><td>fire.</td></tr>
+	<tr><td>1, 2, 3		</td><td>choose weapon.</td></tr>
+	<tr><td>o		</td><td>enter in order menu.</td></tr>
+	<tr><td>Esc		</td><td>exit from order menu.<br>cancel an order.<br>close info windows.</td></tr>
+	<tr><td>tab		</td><td>change to next spaceship.</td></tr>
+	<tr><td>Ctrl-tab	</td><td>change to previous spaceship.</td></tr>
+	<tr><td>PageDown	</td><td>change to next planet.</td></tr>
+	<tr><td>PageUp	        </td><td>change to previous planet.</td></tr>
+	<tr><td>Home	        </td><td>change to first spaceship in outer space.</td></tr>
+	<tr><td>Ctrl-[f1f2f3f4]	</td><td>mark a spaceship.</td></tr>
+	<tr><td>f1, f2, f3, f4	</td><td>select a previous marked spaceship.</td></tr>
+	<tr><td>f5		</td><td>show a spaceship list.</td></tr>
+	<tr><td>f6		</td><td>show game statistics.</td></tr>
+	<tr><td>f7		</td><td>show game messages log.</td></tr>
+	<tr><td>m		</td><td>show-hide space map.</td></tr>
+	<tr><td>arrow keys, SPACE/down arrow	</td><td>manual/automatic mode.</td></tr>
+	<tr><td>Alt-s		</td><td>Eject satellite.</td></tr>
+	<tr><td>Alt-p		</td><td>Eject Pilot.</td></tr>
+	<tr><td>Ctrl-w	        </td><td>write a message to the other players.</td></tr>
+	<tr><td>Ctrl +/-	</td><td>sound volume.</td></tr>
+	<tr><td>Ctrl-n		</td><td>window, spaceship mode view</td></tr>
+	<tr><td>Ctrl-p		</td><td>pause game</td></tr>
+	<tr><td>Ctrl-q		</td><td>quit game.</td></tr>
+	<tr><td>Ctrl-s		</td><td>save game.</td></tr>
+	<tr><td>Ctrl-l		</td><td>load game.</td></tr>
+      </tbody></table>
+      <p>
+	
+	<h4>In map view:</h4>
+	<table border="1"><tbody>
+	  <tr><td>z Z		</td><td>zoom in out.</td></tr>
+	  <tr><td>arrow keys	</td><td>move map.</td></tr>
+	  <tr><td>SPACE		</td><td>center map on the current spaceship.</td></tr>
+	  <tr><td>mouse pointer	</td><td>show coordinates.</td></tr>
+	  <tr><td>l		</td><td>show-hide labels.</td></tr>
+	  <tr><td>left mouse button</td><td>selects the nearest spaceship to mouse pointer.</td></tr>
+	  <tr><td>right mouse button</td><td>send selected spaceships to pointer coordinates.</td></tr>
+
+	</tbody></table>
+	
+	<a name="commandline"></a>
+	<h3>Command line options:</h3>
+	
+	<table border="0" width="700"><tbody>
+	    <tr><td width="80">Usage is:</td><td> spacezero [GENERAL OPTIONS] [GAME OPTIONS]</td></tr>
+	    <tr><td></td><td>spacezero [GENERAL OPTIONS] -s [MULTIPLAYER OPTIONS] [GAME OPTIONS] </td></tr>
+	    <tr><td></td><td>spacezero [GENERAL OPTIONS] -c [MULTIPLAYER OPTIONS]</td></tr>
+	    <tr><td></td><td>          spacezero -h</td></tr>
+	</tbody></table>
+        <br>
+	<table border="0" width="600"><tbody>
+	  <tr><td>-s     </td><td>Server mode. (multiplayer)</td></tr>
+	  <tr><td>-c     </td><td>Client mode. (multiplayer)</td></tr>
+	  <tr><td>-h         </td><td>This help.</td></tr>
+	</tbody></table>
+	<br>
+	<table border="1" width="600"><tbody>
+	    <th>GENERAL OPTIONS</th>
+	    <tr><td>-soundvol n </td><td>where n is the sound effects volume. (0..100)</td></tr>
+	    <tr><td>-musicvol n </td><td>where n is the music volume. (0..100)</td></tr>
+	    <tr><td>-nosound.         </td><td>Sound disabled.</td></tr>
+	    <tr><td>-nomusic.         </td><td>Music disabled.</td></tr>
+	    <tr><td>-nomenu.         </td><td>Starts automatically, without menu.</td></tr>
+	    <tr><td>-name playername. </td><td>Where playername is the name of the player.</td></tr>
+	    <tr><td>-font font.  </td><td>Change the default font by font (XLFD format).</td></tr>
+	    <tr><td>-lang [en,es].         </td><td>Game language. English(default) and spanish supported.</td></tr>
+
+	</tbody></table>
+	<br>
+	<table border="1" width="600"><tbody>
+	    <th>GAME OPTIONS</th>
+	    <tr><td>-geom widthxheigth. </td><td>Define the size of the main window.</td></tr>
+	    <tr><td>-n n.     </td><td>Where n is the number of planets.(2..200, default 30)</td></tr>
+	    <tr><td>-p n.     </td><td>Where n is the number of players.(2..8, default 2)</td></tr>
+	    <tr><td>-g n.     </td><td>Where n is the number of galaxies.(1..10, default 1)</td></tr>
+	    <tr><td>-l n.     </td><td>Where n is the size of the Universe.(10000..1000000, default 100000)</td></tr>
+	    <tr><td>-k.       </td><td>Planets are known by all the players.</td></tr>
+	    <tr><td>-cooperative.         </td><td>Cooperative mode.</td></tr>
+	    <tr><td>-compcooperative.         </td><td>Computer cooperative mode.</td></tr>
+	    <tr><td>-queen.         </td><td>Queen mode.</td></tr>
+	    <tr><td>-pirates.         </td><td>Add a team of pirates (default).</td></tr>
+	    <tr><td>-nopirates.         </td><td>Don't add a team of pirates.</td></tr>
+	    <tr><td>-enemyknown.         </td><td>All enemies are known.</td></tr>
+	    <tr><td>-noenemyknown.         </td><td>All enemies are unknown (default).</td></tr>
+	</tbody></table>
+	
+	<br>
+	<table border="1" width="600"><tbody>
+	    <th>MULTIPLAYER OPTIONS</th>
+	    <tr><td>-ip IP.   </td><td>Where IP is the ip of the server.</td></tr>
+	    <tr><td>-port n.  </td><td>Where n and n+1 are the used ports. (default 50100).</td></tr>
+	</tbody></table>
+	
+	<br>
+</td></tr></tbody></table>
+
+<hr>
+
+<h3>Bugs:</h3>
+
+<p>Not so tested in net between 32 and 64 machines. Maybe doesn't work
+  properly.</p>
+
+<p>Not so tested in an internet connection. Maybe doesn't work
+  properly.</p>
+
+<p>
+  Please, send bugs using the sourceforge tracking tool:<br>
+  
+  <a href="http://sourceforge.net/tracker/?func=add&group_id=354739&atid=1481717">Send bug</a>
+  
+<p>
+  Use the Feature Request tool from sourceforge
+  to <a href="http://sourceforge.net/tracker/?func=add&group_id=354739&atid=1481720
+	      ">send suggestions</a>
+<p>
+  Or send bugs and suggestions to
+  &lt;mrevenga at users.sourceforge.net&gt;.</p>
+
+
+</div>
+
+<!---------------------------------------------------------------->
+
+
+<div class="footer"><hr>
+  <p>Copyright © 2010-2013 MRevenga <br>
+    Page last updated December 21, 2013</p>
+</div>
+</div>
+
+
+<div class="leftcolumn">
+  <img src="manual_files/menu.png" height="125" width="125">  
+  
+  <div class="menuheader">SpaceZero</div>
+    <ul>
+      <li><a href="#kcontrol">Keyboard control</a></li>
+      <li><a href="#commandline">Command options</a></li>
+      <li><a href="#orders">Giving orders</a></li>
+      <li><a href="#selecting">Selecting Spaceships</a></li>
+      <li><a href="#gamemodes">Game modes</a></li>
+      <li><a href="#infowindows">Information windows</a></li>
+      <li><a href="#experiencegold">Experience, gold</a></li>
+      <li><a href="#netgaming">Net gaming</a></li>
+      <li><a href="#loadsave">Load and save</a></li>
+  </ul>
+  
+  <div>&nbsp;</div>
+  
+</body>
+</html>

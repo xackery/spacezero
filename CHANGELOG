@@ -1,0 +1,188 @@
+version 0.86.01
+---------------
+-Fix: Compile issue (i hope)
+
+version 0.86.00
+---------------
+-Added: Spanish translation.
+-Added: new objects: satellites.
+-Added: New objects: Freighter.
+-Added: Cargo. Ships can carry objects.
+-Added: Trading.
+-Minor enhances.
+-Bugfixes.
+-AI:
+   -Added: ORBIT order.
+
+version 0.84.02
+---------------
+-Bugfix: In save games
+-Bugfix: Collision between ships and pilots.
+
+version 0.84.01
+---------------
+-BUG: Pursuing target, waste of fuel.
+-BUG: no ammunition, don't return home.
+-BUG: in statistics.
+
+version 0.84.00
+---------------
+-Added: air resistance.
+-Added: game statistics.
+-Added: random planet names.
+-New explosions.
+-Added: new ship models for pirates.
+-Max velocity increased when accelerate.
+
+-GUI:
+   -Now you can select ships in space.
+   -Number of galaxies added to options window.
+   -Added: enemyknown as game option.
+   -Added: random planet names (thanks to Parallel Realities).
+   -Added: -pirates option.
+   -Added: new ship models for pirates.
+   -Ctrl-w to write messages instead of O-w.
+   -Number of galaxies added to options window.
+-AI:
+   -AI improved.
+   -AI of missiles reviewed.
+   -Attacks improved.
+   -Added: retreat n(ear).
+-Sound:
+   -New background music theme (thanks to Yubatake. http://opengameart.org/users/yubatake).
+   -ogg is now the sound file format.
+   -game sound and music controls.
+-Several bugfixes.
+-Minor enhances.
+
+version 0.82.03
+---------------
+-Fix: bug that creates identical planets.
+-Fix: Pilots cannot be upgraded.
+
+version 0.82.02
+---------------
+-Fix: bug that creates unnecessary trace points.
+
+version 0.82.01
+----------------
+-Fix: AI bug related to the buy and upgrade of ships.
+
+version 0.82.00
+---------------
+-Added astronauts. Survival pods.
+-Window is now resizable.
+-Start up options menu.
+-Sound volume control.
+-Keys defined by user.
+-Help in game.
+-Select and send spaceships with a mouse click.
+-AI:
+   -Added order RETREAT.
+   -Modified order STOP.
+   -EXPLORE reviewed. The ships dont explore out of
+	    Universe limits anymore. Explore method depends on ship's level.
+-Bug fixes:
+   -Asteroids are no more visible everywhere.
+   -Several minor bugfixes.
+-Minor enhances.
+
+version 0.80.08
+---------------
+-Fix: Removed RT signals from code, are not used and some architecture failed to build.
+
+version 0.80.07
+---------------
+-Fix: Makefile
+
+version 0.80.06
+---------------
+-Install directory only defined in Makefile.
+-Refix: initial planet coordinates.
+-Added: html manual
+
+version 0.80.05
+---------------
+-Added: engine flares.
+-Fix: initial planet coordinates.
+
+version 0.80.04
+----------------
+-Fix: ships takeoff with very few ammunition.
+-Fix: incorrect initial number of planets. Incorect initial planet coordinates, planet out of limits.
+
+version 0.80.03
+---------------
+-Fix: pause when order write.
+-Fix: [32-64 bit] Client nickname is truncated to the last part.(!!) ID: 3308044.
+-Fix: Queen autopilot: still crash the ship while landing - Improve ExecLand() ID: 3305062
+-Fix: Towers always aim the enemy even if out of range - ID: 3305048
+- help patch (gionnico)
+- spacecomm patch (resolve hostnames) (gionnico)
+
+version 0.80.02
+---------------
+-Fix: bug [segmentation fault] when you press TAB, PAGUP, PAGDN in order mode (thanks to gionnico)
+
+version 0.80.01
+---------------
+
+-Filter added in order mode. Unwanted characters are not
+	showed any more.
+-The keys: TAB, PageUp, PageDown and HOME get out also from
+	order mode.
+
+version 0.80.00
+---------------
+-Bug fixes.
+  -Bug fixed that make pirates too strong.
+  -A crashing bug was fixed in net games between 32-bit and 64-bit machines.
+  -Minor bugfixes.
+-AI improvements:
+  -AI players follow different strategies.
+  -Attacks to planets improved.
+-Teams. Mode games added:
+  -Cooperative.
+  -Deathmatch.
+  -Queen mode.
+-Ships can be selected with mouse.
+-Game speed improved.
+-GAME OVER added.
+-Minor changes:
+  -Ships and asteroids destroyed inside a planet increase the planet resources.
+  -The command line option -nopirates was added.
+  -Feedback is given in the terminal when an order is given.
+  -Home key selects the first ship in outter space.
+  -Sound control from menu.
+  -Music is now turned off when the game is paused.
+  -Player names in the command line, now works.
+  -It is no longer necessary to install the game to have sound. Sound works from the installation directory.
+  -Documentation updated.
+
+version 0.78.00
+---------------
+- Bug fixes.
+- Added Asteroids.
+- Ships can be upgraded.
+- AI improves.
+  - Formation of commands.
+-New object numeration system (lower numbers).
+-Frames by second up to 24. Smoother movement and lower net traffic.
+
+version 0.76.02
+---------------
+-15Oct10. Minor bug when loading a game. saving actual ship.
+-25Oct10. Minor bug when selecting a planet.
+-27Oct10. Error in ControlCenter().
+-04Nov10. Bug in ControlCenter().
+-30Nov10. Minor Bug in Updateship() in net game.
+-14Dic10. Bug in sending new objects.
+
+version 0.76.01
+---------------
+-28Sep2010. Added ownership in Buyship().
+-29Sep2010. function GetPoints() updated.
+-29Sep2010. BUG in CheckGame().
+-05Oct2010. BUG in ExecLoad().
+-11Oct2010. BUG when loading a game displaying DrawPlayerList().
+
