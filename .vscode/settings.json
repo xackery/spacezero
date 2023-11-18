@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "ai.h": "c",
+        "objects.h": "c",
+        "gtk.h": "c"
+    },
+    "editor.detectIndentation": false,
+	"editor.insertSpaces": false,
+	"editor.tabSize": 4,
+	"editor.autoIndent": "full",
+	"editor.trimAutoWhitespace": true,
+	"files.trimTrailingWhitespace": true,
+	"editor.formatOnSave": true,
+}
